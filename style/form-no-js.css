@@ -1,0 +1,392 @@
+@font-face {
+    font-family: "morgan chalk";
+    src: url(font/MorganChalk-L3aJy.ttf)
+}
+
+@media (min-width: 1370px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #d099af;
+        padding: 1rem 18rem 1rem 15rem;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.8rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:black;
+            text-decoration: none;
+            padding: 1.15rem 2rem;
+            transition:all 1s 50ms;
+        }
+
+        .subpage:hover {
+            background-color:#121212;
+            color:#d099af;
+            font-weight: 400;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            margin: 0.01rem 3rem;
+            padding: 1.15rem 2.5rem 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: "morgan chalk", serif;
+            font-display: wrap;
+            transition:all 1s;
+        }
+
+        .homepage:hover {
+            background-color:#d099af;
+            color:#121212;
+        }
+    }
+
+    h1 {
+        display: flex;
+        align-items: flex-end;
+        background-color: #121212;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        animation-name: background-animation;
+        animation-duration: 4s;
+        height: 93dvh;
+        background-size: 100dvw 98dvh;
+        z-index: -1;
+        font-family: "ivymode-1", serif;
+        font-size: 100px;
+        color:#e8c6d4;
+        padding: 0 10rem 1rem 10rem;
+    }
+
+    #formField {
+        background-color: #121212;
+        color:#f5dee8;
+        background-image: url(../image/b8b7c54a95c9ad05318d5f75f99b8c9e.jpg);
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+
+        form {
+            display: flex;
+            background-color: #121212;
+            width: 55dvw;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding: 3rem 0 0 0;
+
+            label, p {
+                padding: 2px 9.8dvw;
+            }
+
+            input {
+                width: 35dvw;
+                height: 25px;
+                margin: 0 auto;
+                background-color: #1F1B24;
+                color:rgb(250, 233, 251);
+            }
+
+            textarea{
+                resize: vertical;
+                width: 35dvw;
+                height: 25dvh;
+                margin: 0 auto;
+                background-color: #1F1B24;
+                color:rgb(250, 233, 251);
+            }
+
+            input:required {
+                border: 2px solid #d099af
+            }
+
+            input:optional {
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            textarea:optional {
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            input:user-invalid, textarea:user-invalid{
+                border: 2px solid red;
+            }
+
+            input:valid{
+                border: 1px solid green;
+            }
+
+            button {
+                margin: 4rem 0 2rem 0;
+                background: none;
+                border: none;
+                font-family: "ivymode-1", serif;
+                color: #f5dee8;
+                font-size: 1.5rem;
+            }
+
+            required-field {
+                color: #d099af;
+                margin: 0 0 0 2px;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 200;
+            }
+        }
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font: 0.8rem;
+    }
+
+    footer{
+        background-color: #d099af;
+    }
+}
+
+@media (max-width: 1370px) and (min-width: 900px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #d099af;
+        padding: 1rem 4rem 1rem 1.5rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.8rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:black;
+            text-decoration: none;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            margin: 0rem 1rem;
+            padding: 1.15rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: "morgan chalk";
+            font-display: wrap;
+        }
+    }
+
+    h1 {
+        display: flex;
+        align-items: flex-end;
+        background-image: url(../image/haroldandmaude4.jpg);
+        background-color: #121212;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        animation-name: background-animation;
+        animation-duration: 4s;
+        height: 92dvh;
+        background-size: auto 94dvh;
+        z-index: -1;
+        font-family: "ivymode-1", serif;
+        font-size: 5rem;
+        color:#d099af;
+        padding: 0 10rem 1rem 5rem;
+    }
+
+    main {
+        background-color: #121212;
+        color:#f5dee8;
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+        padding: 3rem 5rem;
+
+        #film-me{
+            display:flex;
+            justify-content: space-between;
+            padding: 4rem 0rem;
+        }
+
+        #film-buddha {
+            display:flex;
+            justify-content: space-between;
+            padding: 4rem 0rem;
+
+            article{
+                padding: 0rem 5rem 0rem 0rem;
+            }
+        }
+
+        iframe {
+            display:flex;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: "ivymode-1", serif;
+        }
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font: 0.8rem;
+    }
+
+    footer{
+        background-color: #d099af;
+    }
+}
+
+@media (max-width: 900px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: #d099af;
+        padding: 1rem 0rem 1rem 0rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.6rem;
+            font-weight: 100;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color: #121212;
+            text-decoration: none;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            padding: 1.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+            font-family: "morgan chalk";
+            font-display: wrap;
+        }
+    }
+
+    h1 {
+        display: flex;
+        align-items: flex-end;
+        background-image: url(../image/haroldandmaude4.jpg);
+        background-color: #121212;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        animation-name: background-animation;
+        animation-duration: 4s;
+        height: 92dvh;
+        background-size: auto 94dvh;
+        z-index: -1;
+        font-family: "ivymode-1", serif;
+        font-size: 2.5rem;
+        color:#d099af;
+        padding: 0 0rem 1rem 2rem;
+    }
+
+    main {
+        background-color: #121212;
+        color:#f5dee8;
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+        padding: 2rem 2rem;
+
+        #film-me{
+            display:flex;
+            flex-direction: column;
+            padding: 2rem 0rem;
+
+            article{
+                padding: 0rem 0rem 2rem 0rem;
+            }
+        }
+
+        #film-buddha {
+            display:flex;
+            flex-direction: column;
+            padding: 2rem 0rem;
+
+            article{
+                padding: 0rem 0rem 2rem 0rem;
+            }
+        }
+
+        iframe {
+            width: 80dvw;
+            height: 40dvw;
+        }
+
+        h2 {
+            font-family: "ivymode-1", serif;
+        }
+    }
+
+    footer{
+        display: none;
+    }
+}

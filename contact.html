@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Cici</title>
+        <meta charset="UTF-8">
+        <meta property="og:title" content="Contact - Cici Bu">
+        <meta property="og:description" content="Contact Cici - a bioinformatics student at UC San Diego, a member in Gymrek lab, and a photographer.">
+        <link rel="stylesheet" href="style/contact.css">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel='stylesheet' id='life-fonts-css' href='https://use.typekit.net/mlz4swi.css?ver=1.5.1' media='all'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                Contact Me
+                <button id="themeToggle" style="display: none;">☽</button>
+            </h1>
+
+            <script>
+                document.getElementById("themeToggle").style.display = "inline"; 
+                const currentTheme = localStorage.getItem('theme');
+                if (currentTheme) {
+                    document.body.setAttribute('data-theme', currentTheme);
+                    themeToggle.textContent = currentTheme === "dark" ? "☼" : "☽";
+                } else {
+                    document.body.setAttribute('data-theme', 'light');
+                    themeToggle.textContent = "☽";
+                }
+              
+                document.getElementById('themeToggle').addEventListener('click', () => {
+                    let theme = document.body.getAttribute('data-theme');
+                    if (theme === 'dark') {
+                        document.body.setAttribute('data-theme', 'light');
+                        themeToggle.textContent = "☽";
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        document.body.setAttribute('data-theme', 'dark');
+                        themeToggle.textContent = "☼";
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            </script>
+
+            <nav>
+                <ul>
+                    <li><a class="subpage" href="lab.html">Bioinfo Labs</a></li>
+                    <li><a class="homepage" href=".">Cici Bu</a></li>
+                    <li><a class="subpage" href="film.html">My Short Film</a></li>
+                    <li><a class="subpage" href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="formField">
+            <form id="contactMe" action="https://httpbin.org/post" method="POST">
+                <label for="name">Name<required-field>*</required-field></label>
+                <input type="text" id="name" name="name" autofocus required>
+                <br>
+                <label for="name">Email<required-field>*</required-field></label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments" rows="15" cols="33"></textarea>
+
+                <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                <p>Fields marked in <required-field>*</required-field> are required for submission</p>
+                <output id="info-message"></output>
+                <output id="error-message"></output>
+
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const form = document.getElementById("contactMe");
+                    const nameInput = document.getElementById("name");
+                    const emailInput = document.getElementById("email");
+                    const commentsTextArea = document.getElementById("comments");
+                    const errorMessage = document.getElementById("error-message");
+                    const infoMessage = document.getElementById("info-message");
+                    let form_errors = [];
+                
+                    let previousValue = ""
+                    nameInput.addEventListener("input", function () {
+                        const pattern = /^[A-Za-z\s\-]*$/;
+                        const value = nameInput.value;
+                        
+                        if (!pattern.test(value)) {
+                            nameInput.style.backgroundColor = "red";
+                            setTimeout(() => {
+                                nameInput.style.backgroundColor = ""
+                            }, 200);
+                            nameInput.setCustomValidity("Name has invalid characters!");
+                            showError("Name has invalid characters!");
+                            form_errors.push({
+                                field: "name",
+                                message: "Name has invalid characters"
+                            });
+                            nameInput.value = previousValue; 
+                        } else {
+                            previousValue = value;
+                            nameInput.style.border = "2px solid green";
+                            nameInput.setCustomValidity("");
+                            clearError();
+                        }
+                    });
+                
+                    emailInput.addEventListener("change", function () {
+                        const value = emailInput.value;
+                        if (emailInput.validity.typeMismatch||value.trim() === "") {
+                            emailInput.style.border = "2px solid red";
+                            emailInput.setCustomValidity("Please enter a valid email address.");
+                            form_errors.push({
+                                field: "email",
+                                message: "Email has invalid characters"
+                            });
+                            showError("Please enter a valid email address.");
+                        } else {
+                            emailInput.style.border = "2px solid green";
+                            emailInput.setCustomValidity("");
+                            clearError();
+                        }
+                    });
+                
+                    commentsTextArea.addEventListener("input", function () {
+                        const maxLength = 2000;
+                        const currentLength = commentsTextArea.value.length;
+                        infoMessage.textContent = `${currentLength} / ${maxLength} char`;
+
+                        const testAreaPattern = /^(?!.*\$).*$/;
+                        const testAreaValue = commentsTextArea.value;
+                        
+                        if (testAreaValue.indexOf("$")!=-1) {
+                            console.log("I got here!!")
+                            console.log(commentsTextArea);
+                            commentsTextArea.style.border = "2px solid red";
+                            console.log(commentsTextArea);
+                            commentsTextArea.setCustomValidity("Comment has invalid characters!");
+                            showError("Comment has invalid characters!");
+                            form_errors.push({
+                                field: "comment",
+                                message: "Comment has invalid characters"
+                            });
+                        } else if (currentLength > maxLength) {
+                            commentsTextArea.style.border = "2px solid red";
+                            errorMessage.textContent = "Comment exceeds allowed length";
+                            errorMessage.style.color = "red";
+                            infoMessage.style.color = "red";
+                            commentsTextArea.setCustomValidity("Comment exceeds allowed length");
+                            form_errors.push({
+                                field: "comments",
+                                message: "Comment exceeds allowed length"
+                            });
+                        } else if (currentLength >= maxLength * 0.9) {
+                            commentsTextArea.style.border = "2px solid orange";
+                            infoMessage.textContent = `${currentLength} / ${maxLength} char  Getting close to the limit!`;
+                            errorMessage.textContent = "";
+                            errorMessage.style.color = "";
+                            infoMessage.style.color = "";
+                            commentsTextArea.setCustomValidity("");
+                        } else {
+                            commentsTextArea.style.border = "2px solid green";
+                            errorMessage.textContent = "";
+                            errorMessage.style.color = "";
+                            infoMessage.style.color = "";
+                            commentsTextArea.setCustomValidity("");
+                        }
+                    });
+                
+                    function showError(message) {
+                        errorMessage.textContent = message;
+                        errorMessage.style.color = "red";
+                        setTimeout(() => {
+                            errorMessage.textContent = "";
+                        }, 3000);
+                    }
+                
+                    function clearError() {
+                        errorMessage.textContent = "";
+                    }
+                
+                    form.addEventListener("submit", function (event) {
+                        const formErrorsField = document.createElement("input");
+                        formErrorsField.type = "hidden";
+                        formErrorsField.name = "form-errors";
+                        formErrorsField.value = JSON.stringify(form_errors);
+                        form.appendChild(formErrorsField);
+                    });
+                });
+            </script>
+        </section>
+    
+        <footer>
+            <nav>
+                <ul class="footer">
+                    <li><a href=".">Home</a></li>
+                    <li><a href="lab.html">Bioinfo Labs</a></li>
+                    <li><a href="film.html">My Short Film</a></li>
+                </ul>
+            </nav>
+            
+            <section class="footer" id="footer">
+                <p id="footer-copyright">&copy; Xinxin Bu 2025</p>
+
+                <p id="footer-contact">Contact Information:</p> 
+                <address><a href="mailto:cicibu2002@gmail.com">cicibu2002@gmail.com</a></address>
+
+                <a href=#top_page id="footer-back">back to top</a>
+            </section>
+        </footer>
+    </body>
+</html>

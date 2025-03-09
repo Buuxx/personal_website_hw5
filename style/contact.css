@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "morgan chalk";
+    src: url(font/MorganChalk-L3aJy.ttf)
+}
+
+:root {
+    --background-color: #F1F0E8;
+    --text-color: #121212;
+    --input-color: #E5E1DA;
+    --navigation-color: #89A8B2;
+}
+  
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #f5dee8;
+    --input-color: #1F1B24;
+    --navigation-color: #d099af;
+}
+
+@media (min-width: 1280px){
+    * {
+        margin: 0;
+    }
+
+    #themeToggle {
+        color:var(--text-color);
+        background-color:var(--background-color);
+        margin: center;
+        border: none;
+        display:inline;
+        padding: 0 0 0 50dvw;
+        font-size: 2rem;
+    }
+
+    nav {
+        background-color: var(--navigation-color);
+        padding: 1rem 18rem 1rem 15rem;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: var(--navigation-color);
+        }
+
+        .subpage {
+            font-size: 0.8rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:var(--background-color);
+            text-decoration: none;
+            padding: 1.15rem 2rem;
+            transition:all 1s 50ms;
+        }
+
+        .subpage:hover {
+            background-color:var(--background-color);
+            color:var(--navigation-color);
+            font-weight: 400;
+        }
+
+        .homepage {
+            background-color: var(--background-color);
+            color: var(--navigation-color);
+            text-decoration: none;
+            margin: 0.01rem 3rem;
+            padding: 1.15rem 2.5rem 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: "morgan chalk", serif;
+            font-display: wrap;
+            transition:all 1s;
+        }
+
+        .homepage:hover {
+            background-color:var(--navigation-color);
+            color:var(--background-color);
+        }
+    }
+
+    h1 {
+        display: flex;
+        align-items: flex-end;
+        background-color: var(--background-color);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        animation-name: background-animation;
+        animation-duration: 4s;
+        height: 93dvh;
+        background-size: 100dvw 98dvh;
+        z-index: -1;
+        font-family: "ivymode-1", serif;
+        font-size: 100px;
+        color:var(--text-color);
+        padding: 0 10rem 1rem 10rem;
+    }
+
+    #formField {
+        background-color: var(--background-color);
+        color:var(--text-color);
+        background-image: url(../image/b8b7c54a95c9ad05318d5f75f99b8c9e.jpg);
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+
+        form {
+            display: flex;
+            background-color: var(--background-color);
+            width: 55dvw;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding: 3rem 0 0 0;
+
+            label, p, output {
+                padding: 2px 9.8dvw;
+            }
+
+            input {
+                width: 35dvw;
+                height: 25px;
+                margin: 0 auto;
+                background-color: var(--input-color);
+                color:var(--text-color);
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            textarea{
+                resize: vertical;
+                width: 35dvw;
+                height: 25dvh;
+                margin: 0 auto;
+                background-color: var(--input-color);
+                color:var(--text-color);
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            button {
+                margin: 4rem 0 2rem 0;
+                background: none;
+                border: none;
+                font-family: "ivymode-1", serif;
+                color: var(--text-color);
+                font-size: 1.5rem;
+            }
+
+            required-field {
+                color: var(--navigation-color);
+                margin: 0 0 0 2px;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 200;
+            }
+        }
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font: 0.8rem;
+    }
+
+    footer{
+        background-color: var(--navigation-color);
+    }
+}
+
+@media (min-width: 360px) and (max-width: 1280px){
+    * {
+        margin: 0;
+    }
+
+    #themeToggle {
+        color:var(--text-color);
+        background-color:var(--background-color);
+        margin: center;
+        border: none;
+        display:inline;
+        padding: 0 0 0 50dvw;
+        font-size: 2rem;
+    }
+
+    nav {
+        background-color: var(--navigation-color);
+        padding: 1rem 0rem 1rem 0rem;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: var(--navigation-color);
+        }
+
+        .subpage {
+            font-size: 0.6rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:var(--background-color);
+            text-decoration: none;
+            padding: 1.15rem 0.5rem;
+            transition:all 1s 50ms;
+        }
+
+        .subpage:hover {
+            background-color:var(--background-color);
+            color:var(--navigation-color);
+            font-weight: 400;
+        }
+
+        .homepage {
+            background-color: var(--background-color);
+            color: var(--navigation-color);
+            text-decoration: none;
+            margin: 0.01rem 1rem;
+            padding: 1.15rem 1rem 1rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+            font-family: "morgan chalk", serif;
+            font-display: wrap;
+            transition:all 1s;
+        }
+
+        .homepage:hover {
+            background-color:var(--navigation-color);
+            color:var(--background-color);
+        }
+    }
+
+    h1 {
+        display: flex;
+        align-items: flex-end;
+        background-color: var(--background-color);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        animation-name: background-animation;
+        animation-duration: 4s;
+        height: 93dvh;
+        background-size: 100dvw 98dvh;
+        z-index: -1;
+        font-family: "ivymode-1", serif;
+        font-size: 80px;
+        color:var(--text-color);
+        padding: 0 0rem 1rem 2rem;
+    }
+
+    #formField {
+        background-color: var(--background-color);
+        color:var(--text-color);
+        background-image: url(../image/b8b7c54a95c9ad05318d5f75f99b8c9e.jpg);
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+
+        form {
+            display: flex;
+            background-color: var(--background-color);
+            width: 55dvw;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding: 3rem 0 0 0;
+
+            label, p, output {
+                padding: 2px 9.8dvw;
+            }
+
+            input {
+                width: 35dvw;
+                height: 25px;
+                margin: 0 auto;
+                background-color: var(--input-color);
+                color:var(--text-color);
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            textarea{
+                resize: vertical;
+                width: 35dvw;
+                height: 25dvh;
+                margin: 0 auto;
+                background-color: var(--input-color);
+                color:var(--text-color);
+                border: 1.9px solid rgba(232, 198, 212, 0.5)
+            }
+
+            button {
+                margin: 4rem 0 2rem 0;
+                background: none;
+                border: none;
+                font-family: "ivymode-1", serif;
+                color: var(--text-color);
+                font-size: 1.5rem;
+            }
+
+            required-field {
+                color: var(--navigation-color);
+                margin: 0 0 0 2px;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 200;
+            }
+        }
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font: 0.8rem;
+    }
+
+    footer{
+        background-color: var(--navigation-color);
+    }
+}

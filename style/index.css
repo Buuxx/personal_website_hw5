@@ -1,0 +1,482 @@
+@font-face {
+    font-family: "morgan chalk";
+    src: url(font/MorganChalk-L3aJy.ttf)
+}
+
+@media (min-width: 1360px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #d099af;
+        padding: 1rem 18rem 1rem 15rem;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.8rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:black;
+            text-decoration: none;
+            padding: 1.15rem 2rem;
+            transition:all 1s 50ms;
+        }
+
+        .subpage:hover {
+            background-color:#121212;
+            color:#d099af;
+            font-weight: 400;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            margin: 0.01rem 3rem;
+            padding: 1.15rem 2.5rem 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: "morgan chalk", serif;
+            font-display: wrap;
+            transition:all 1s;
+        }
+
+        .homepage:hover {
+            background-color:#d099af;
+            color:#121212;
+        }
+    }
+
+    .background {
+        display: flex;
+        align-items: flex-end;
+        background-image: url(../image/glass2.jpg);
+        background-color: #121212;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 94dvh;
+        background-size: 100dvw auto;
+        z-index: -1;
+    }
+
+    #header-h-group{
+        color:#e8c6d4;
+        padding: 0 20rem 3rem 20rem;
+    }
+
+    #header-h-group > h1 {
+        font-family: "ivymode-1", serif;
+        font-size: 100px;
+    }
+
+    #header-h-group > p {
+        font-family: "ivymode-1";
+        padding: 1rem 0rem 0rem 1rem;
+    }
+
+    main {
+        background-color: #121212;
+        color:#f5dee8;
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+    }
+
+    #main-content{
+        padding: 3rem 28rem;
+    }
+
+    .main-h2 {
+        font-family: "ivymode-1", serif;
+        font-size: 2rem;
+        font-weight: 100;
+        padding: 4rem 0rem 0rem 0rem;
+    }
+
+    #about-me-h-group > p {
+        font-family: "IBM Plex Sans", serif, monospace;;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        padding: 1rem 0rem 2rem 0rem;
+        letter-spacing: 0.15rem;
+        font-weight: 100;
+    }
+
+    aside{
+        font-style: italic;
+        font-weight: 100;
+        padding: 0rem 3rem 0rem 2rem;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        text-align: justify;
+    }
+
+    #h2-photo-gallery{
+        padding: 0rem 28rem;
+    }
+
+    #img1 {
+        width: 40dvw;
+    }
+
+    image-navigation{
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 2rem 0rem 10rem 0rem;
+    }
+
+    #photo-gallery-to-the-left {
+        border: none;
+        background-color: transparent;
+        color:#e8c6d4;
+        padding: 0rem 2rem 0rem 0rem;
+    }
+
+    #photo-gallery-to-the-left:hover {
+        transform: scale(1.2);
+    }
+
+    #photo-gallery-to-the-right {
+        border: none;
+        background-color: transparent;
+        color: #e8c6d4;
+        padding: 0rem 0rem 0rem 2rem;
+    }
+
+    #photo-gallery-to-the-right:hover {
+        transform: scale(1.2);
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font: 0.8rem;
+    }
+
+    footer{
+        background-color: #d099af;
+    }
+}
+
+@media (max-width: 1360px) and (min-width: 750px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #d099af;
+        padding: 1rem 4rem 1rem 1.5rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.8rem;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color:black;
+            text-decoration: none;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            margin: 0rem 1rem;
+            padding: 1.15rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: "morgan chalk";
+            font-display: wrap;
+        }
+    }
+
+    .background {
+        display: flex;
+        align-items: flex-end;
+        background-image: url(../image/glass2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: #121212;
+        height: 94dvh;
+        background-size: auto 94dvh;
+        z-index: -1;
+    }
+
+    #header-h-group{
+        color:#e8c6d4;
+        padding: 0 5rem 2rem 5rem;
+    }
+
+    #header-h-group > h1 {
+        font-family: "ivymode-1", serif;
+        font-size: 100px;
+    }
+
+    #header-h-group > p {
+        font-family: "ivymode-1";
+        padding: 1rem 0rem 0rem 1rem;
+    }
+
+    main {
+        background-color: #121212;
+        color:#f5dee8;
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+    }
+
+    #main-content{
+        padding: 3rem 12rem;
+    }
+
+    .main-h2 {
+        font-family: "ivymode-1", serif;
+        font-size: 2rem;
+        font-weight: 100;
+        padding: 4rem 0rem 0rem 0rem;
+    }
+
+    #about-me-h-group > p {
+        font-family: "IBM Plex Sans", serif, monospace;;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        padding: 1rem 0rem 2rem 0rem;
+        letter-spacing: 0.15rem;
+        font-weight: 100;
+    }
+
+    aside{
+        font-style: italic;
+        font-weight: 100;
+        padding: 0rem 3rem 0rem 2rem;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        text-align: justify;
+    }
+
+    #h2-photo-gallery{
+        padding: 0rem 12rem;
+    }
+
+    #img1 {
+        width: 55dvw;
+    }
+
+    image-navigation{
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 2rem 0rem 10rem 0rem;
+    }
+
+    #photo-gallery-to-the-left {
+        border: none;
+        background-color: transparent;
+        color:#e8c6d4;
+        padding: 0rem 2rem 0rem 0rem;
+    }
+
+    #photo-gallery-to-the-left:hover {
+        transform: scale(1.2);
+    }
+
+    #photo-gallery-to-the-right {
+        border: none;
+        background-color: transparent;
+        color: #e8c6d4;
+        padding: 0rem 0rem 0rem 2rem;
+    }
+
+    #photo-gallery-to-the-right:hover {
+        transform: scale(1.2);
+    }
+
+    #footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .footer *{
+        font-family: "IBM Plex Sans", monospace, serif;
+        font-weight: 200;
+        text-decoration: none;
+        color: #121212;
+        font-size: 0.8rem;
+    }
+
+    footer{
+        background-color: #d099af;
+    }
+}
+
+
+@media (max-width: 750px){
+    * {
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: #d099af;
+        padding: 1rem 0rem 1rem 0rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #d099af;
+        }
+
+        .subpage {
+            font-size: 0.6rem;
+            font-weight: 100;
+            font-family: "IBM Plex Sans", monospace, serif;
+            font-weight: 200;
+            color: #121212;
+            text-decoration: none;
+        }
+
+        .homepage {
+            background-color: #121212;
+            color: #d099af;
+            text-decoration: none;
+            padding: 1.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+            font-family: "morgan chalk";
+            font-display: wrap;
+        }
+    }
+
+    .background {
+        display: flex;
+        align-items: flex-end;
+        background-image: url(../image/glass2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 94dvh;
+        background-size: auto 94dvh;
+        z-index: -1;
+    }
+
+    #header-h-group{
+        color:#e8c6d4;
+        padding: 0 5rem 2rem 2rem;
+    }
+
+    #header-h-group > h1 {
+        font-family: "ivymode-1", serif;
+        font-size: 4rem;
+    }
+
+    #header-h-group > p {
+        font-family: "ivymode-1";
+        font-size: 0.8rem;
+        padding: 0rem 0rem 0rem 0.5rem;
+    }
+
+    main {
+        background-color: #121212;
+        color:#f5dee8;
+        font-family: "IBM Plex Sans", serif, monospace;
+        font-display: swap;
+        font-weight: 250;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+    }
+
+    #main-content{
+        padding: 2rem 2rem;
+    }
+
+    .main-h2 {
+        font-family: "ivymode-1", serif;
+        font-size: 2rem;
+        font-weight: 100;
+        padding: 4rem 0rem 0rem 0rem;
+    }
+
+    #about-me-h-group > p {
+        font-family: "IBM Plex Sans", serif, monospace;;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        padding: 1rem 0rem 2rem 0rem;
+        letter-spacing: 0.15rem;
+        font-weight: 100;
+    }
+
+    aside{
+        font-style: italic;
+        font-weight: 100;
+        padding: 0rem 2rem 0rem 1rem;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+    }
+
+    #h2-photo-gallery{
+        padding: 0rem 2rem;
+    }
+
+    #img1 {
+        width: 80dvw;
+    }
+
+    image-navigation{
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 2rem 0rem 10rem 0rem;
+    }
+
+    #photo-gallery-to-the-left {
+        border: none;
+        background-color: transparent;
+        color:#e8c6d4;
+    }
+
+    #photo-gallery-to-the-right {
+        border: none;
+        background-color: transparent;
+        color: #e8c6d4;
+    }
+
+    footer {
+        display: none;
+    }
+}
