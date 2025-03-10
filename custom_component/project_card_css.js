@@ -69,11 +69,12 @@ export function getProjectCardCSS() {
         
         img {
             object-fit: cover;
-            transition: all 3s ease;
+            transition: all 2s ease-in-out;
+            transition-delay: 0.3s;
         }
         
         img:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
         }
     `;
 }
