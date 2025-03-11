@@ -6,52 +6,7 @@
 @media (min-width: 1360px){
     * {
         margin: 0;
-    }
-
-    nav {
-        background-color: #d099af;
-        padding: 1rem 18rem 1rem 15rem;
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: #d099af;
-        }
-
-        .subpage {
-            font-size: 0.8rem;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color:black;
-            text-decoration: none;
-            padding: 1.15rem 2rem;
-            transition:all 1s 50ms;
-        }
-
-        .subpage:hover {
-            background-color:#121212;
-            color:#d099af;
-            font-weight: 400;
-        }
-
-        .homepage {
-            background-color: #121212;
-            color: #d099af;
-            text-decoration: none;
-            margin: 0.01rem 3rem;
-            padding: 1.15rem 2.5rem 1rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: "morgan chalk", serif;
-            font-display: wrap;
-            transition:all 1s;
-        }
-
-        .homepage:hover {
-            background-color:#d099af;
-            color:#121212;
-        }
+        padding: 0;
     }
 
     .background {
@@ -159,62 +114,9 @@
     #photo-gallery-to-the-right:hover {
         transform: scale(1.2);
     }
-
-    #footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    
-    .footer *{
-        font-family: "IBM Plex Sans", monospace, serif;
-        font-weight: 200;
-        text-decoration: none;
-        color: #121212;
-        font: 0.8rem;
-    }
-
-    footer{
-        background-color: #d099af;
-    }
 }
 
 @media (max-width: 1360px) and (min-width: 750px){
-    * {
-        margin: 0;
-    }
-
-    nav {
-        background-color: #d099af;
-        padding: 1rem 4rem 1rem 1.5rem;
-
-        ul{
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: #d099af;
-        }
-
-        .subpage {
-            font-size: 0.8rem;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color:black;
-            text-decoration: none;
-        }
-
-        .homepage {
-            background-color: #121212;
-            color: #d099af;
-            text-decoration: none;
-            margin: 0rem 1rem;
-            padding: 1.15rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: "morgan chalk";
-            font-display: wrap;
-        }
-    }
 
     .background {
         display: flex;
@@ -321,65 +223,10 @@
     #photo-gallery-to-the-right:hover {
         transform: scale(1.2);
     }
-
-    #footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    
-    .footer *{
-        font-family: "IBM Plex Sans", monospace, serif;
-        font-weight: 200;
-        text-decoration: none;
-        color: #121212;
-        font-size: 0.8rem;
-    }
-
-    footer{
-        background-color: #d099af;
-    }
 }
 
 
 @media (max-width: 750px){
-    * {
-        margin: 0;
-    }
-
-    nav {
-        position: fixed;
-        width: 100%;
-        background-color: #d099af;
-        padding: 1rem 0rem 1rem 0rem;
-
-        ul{
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: #d099af;
-        }
-
-        .subpage {
-            font-size: 0.6rem;
-            font-weight: 100;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color: #121212;
-            text-decoration: none;
-        }
-
-        .homepage {
-            background-color: #121212;
-            color: #d099af;
-            text-decoration: none;
-            padding: 1.4rem 1rem;
-            font-size: 0.8rem;
-            font-weight: 800;
-            font-family: "morgan chalk";
-            font-display: wrap;
-        }
-    }
 
     .background {
         display: flex;
@@ -388,8 +235,8 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
-        height: 94dvh;
-        background-size: auto 94dvh;
+        height: 95dvh;
+        background-size: auto 95dvh;
         z-index: -1;
     }
 
@@ -462,21 +309,5 @@
         justify-content: center;
         flex-direction: row;
         padding: 2rem 0rem 10rem 0rem;
-    }
-
-    #photo-gallery-to-the-left {
-        border: none;
-        background-color: transparent;
-        color:#e8c6d4;
-    }
-
-    #photo-gallery-to-the-right {
-        border: none;
-        background-color: transparent;
-        color: #e8c6d4;
-    }
-
-    footer {
-        display: none;
     }
 }

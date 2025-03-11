@@ -5,22 +5,23 @@
         <meta charset="UTF-8">
         <meta property="og:title" content="Contact - Cici Bu">
         <meta property="og:description" content="Contact Cici - a bioinformatics student at UC San Diego, a member in Gymrek lab, and a photographer.">
+        <link rel="stylesheet" href="style/navbar.css">
         <link rel="stylesheet" href="style/lab.css">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link rel='stylesheet' id='life-fonts-css' href='https://use.typekit.net/mlz4swi.css?ver=1.5.1' media='all'/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+    <body id="top_page">
         <header>
             <h1>Bioinformatics Labs</h1>
-            <nav>
-                <ul>
-                    <li><a class="subpage" href="photos.html">Photo Gallery</a></li>
-                    <li><a class="subpage" href="lab.html">Bioinfo Labs</a></li>
-                    <li><a class="homepage" href=".">Cici Bu</a></li>
-                    <li><a class="subpage" href="film.html">My Short Film</a></li>
-                    <li><a class="subpage" href="contact.html">Contact Me</a></li>
+            <nav id="main-navigation">
+                <ul id="main-navigation-ul">
+                    <li id="nav-photo"><a class="subpage" href="photos.html">Photo Gallery</a></li>
+                    <li id="nav-lab"><a class="subpage" href="lab.html">Bioinfo Labs</a></li>
+                    <li id="nav-homepage"><a class="homepage" href=".">Cici Bu</a></li>
+                    <li id="nav-film"><a class="subpage" href="film.html">My Short Film</a></li>
+                    <li id="nav-contact"><a class="subpage" href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,24 +64,19 @@
         </main>
 
         <footer>
-            <nav>
-                <ul class="footer">
+            <p id="copyright">&copy; 2025 Xinxin(Cici) Bu / Built by <a class="email" href="mailto:cicibu2002@gmail.com">Cici Bu</a></p>
+
+            <nav id="footer-nav">
+                <ul id="footer-ul">
+                    <li><a id="footer-homepage" href=".">Home</a></li>
                     <li><a href="photos.html">Photo Gallery</a></li>
                     <li><a href="lab.html">Bioinfo Labs</a></li>
-                    <li><a href=".">Cici Bu</a></li>
-                    <li><a href="film.html">My Short Film</a></li>
+                    <li><a href="film.html">Short Films</a></li>
                     <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
-            
-            <section class="footer" id="footer">
-                <p id="footer-copyright">&copy; Xinxin Bu 2025</p>
 
-                <p id="footer-contact">Contact Information:</p> 
-                <address><a href="mailto:cicibu2002@gmail.com">cicibu2002@gmail.com</a></address>
-
-                <a href=#top_page id="footer-back">back to top</a>
-            </section>
+            <a href=#top_page id="back-to-top">back to top</a>
         </footer>
     </body>
 </html>

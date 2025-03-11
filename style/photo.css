@@ -11,67 +11,8 @@
 }
 
 @media (min-width: 1280px){
-    * {
-        margin: 0;
-    }
 
-    #themeToggle {
-        color:var(--text-color);
-        background-color:var(--background-color);
-        margin: center;
-        border: none;
-        display:inline;
-        padding: 0 0 0 50dvw;
-        font-size: 2rem;
-    }
-
-    nav {
-        background-color: var(--navigation-color);
-        padding: 1rem 18rem 1rem 15rem;
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: var(--navigation-color);
-        }
-
-        .subpage {
-            font-size: 0.8rem;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color:var(--background-color);
-            text-decoration: none;
-            padding: 1.15rem 2rem;
-            transition:all 1s 50ms;
-        }
-
-        .subpage:hover {
-            background-color:var(--background-color);
-            color:var(--navigation-color);
-            font-weight: 400;
-        }
-
-        .homepage {
-            background-color: var(--background-color);
-            color: var(--navigation-color);
-            text-decoration: none;
-            margin: 0.01rem 3rem;
-            padding: 1.15rem 2.5rem 1rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: "morgan chalk", serif;
-            font-display: wrap;
-            transition:all 1s;
-        }
-
-        .homepage:hover {
-            background-color:var(--navigation-color);
-            color:var(--background-color);
-        }
-    }
-
-    h1 {
+    #background {
         display: flex;
         align-items: flex-end;
         background-color: var(--background-color);
@@ -80,9 +21,12 @@
         background-position: top center;
         animation-name: background-animation;
         animation-duration: 4s;
-        height: 93dvh;
-        background-size: 100dvw 98dvh;
+        height: 94dvh;
+        background-size: 100dvw 94dvh;
         z-index: -1;
+    }
+
+    h1 {
         font-family: "ivymode-1", serif;
         font-size: 90px;
         color:var(--text-color);
@@ -140,23 +84,5 @@
 
     #vertical-row34 {
         grid-area: v34;
-    }
-
-
-    #footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    
-    .footer *{
-        font-family: "IBM Plex Sans", monospace, serif;
-        font-weight: 200;
-        text-decoration: none;
-        color: #121212;
-        font: 0.8rem;
-    }
-
-    footer{
-        background-color: var(--navigation-color);
     }
 }

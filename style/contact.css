@@ -1,27 +1,11 @@
+@import url(variable.css);
+
 @font-face {
     font-family: "morgan chalk";
     src: url(../font/MorganChalk-L3aJy.ttf)
 }
 
-:root {
-    --background-color: #F1F0E8;
-    --text-color: #121212;
-    --input-color: #E5E1DA;
-    --navigation-color: #89A8B2;
-}
-  
-
-[data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #f5dee8;
-    --input-color: #1F1B24;
-    --navigation-color: #d099af;
-}
-
 @media (min-width: 1280px){
-    * {
-        margin: 0;
-    }
 
     #themeToggle {
         color:var(--text-color);
@@ -31,52 +15,6 @@
         display:inline;
         padding: 0 0 0 50dvw;
         font-size: 2rem;
-    }
-
-    nav {
-        background-color: var(--navigation-color);
-        padding: 1rem 18rem 1rem 15rem;
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: var(--navigation-color);
-        }
-
-        .subpage {
-            font-size: 0.8rem;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color:var(--background-color);
-            text-decoration: none;
-            padding: 1.15rem 2rem;
-            transition:all 1s 50ms;
-        }
-
-        .subpage:hover {
-            background-color:var(--background-color);
-            color:var(--navigation-color);
-            font-weight: 400;
-        }
-
-        .homepage {
-            background-color: var(--background-color);
-            color: var(--navigation-color);
-            text-decoration: none;
-            margin: 0.01rem 3rem;
-            padding: 1.15rem 2.5rem 1rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: "morgan chalk", serif;
-            font-display: wrap;
-            transition:all 1s;
-        }
-
-        .homepage:hover {
-            background-color:var(--navigation-color);
-            color:var(--background-color);
-        }
     }
 
     h1 {
@@ -162,23 +100,6 @@
             }
         }
     }
-
-    #footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    
-    .footer *{
-        font-family: "IBM Plex Sans", monospace, serif;
-        font-weight: 200;
-        text-decoration: none;
-        color: #121212;
-        font: 0.8rem;
-    }
-
-    footer{
-        background-color: var(--navigation-color);
-    }
 }
 
 @media (min-width: 360px) and (max-width: 1280px){
@@ -194,52 +115,6 @@
         display:inline;
         padding: 0 0 0 50dvw;
         font-size: 2rem;
-    }
-
-    nav {
-        background-color: var(--navigation-color);
-        padding: 1rem 0rem 1rem 0rem;
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            background-color: var(--navigation-color);
-        }
-
-        .subpage {
-            font-size: 0.6rem;
-            font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
-            color:var(--background-color);
-            text-decoration: none;
-            padding: 1.15rem 0.5rem;
-            transition:all 1s 50ms;
-        }
-
-        .subpage:hover {
-            background-color:var(--background-color);
-            color:var(--navigation-color);
-            font-weight: 400;
-        }
-
-        .homepage {
-            background-color: var(--background-color);
-            color: var(--navigation-color);
-            text-decoration: none;
-            margin: 0.01rem 1rem;
-            padding: 1.15rem 1rem 1rem 1rem;
-            font-size: 0.8rem;
-            font-weight: 800;
-            font-family: "morgan chalk", serif;
-            font-display: wrap;
-            transition:all 1s;
-        }
-
-        .homepage:hover {
-            background-color:var(--navigation-color);
-            color:var(--background-color);
-        }
     }
 
     h1 {
@@ -324,22 +199,5 @@
                 font-weight: 200;
             }
         }
-    }
-
-    #footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    
-    .footer *{
-        font-family: "IBM Plex Sans", monospace, serif;
-        font-weight: 200;
-        text-decoration: none;
-        color: #121212;
-        font: 0.8rem;
-    }
-
-    footer{
-        background-color: var(--navigation-color);
     }
 }

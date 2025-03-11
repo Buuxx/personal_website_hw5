@@ -1,0 +1,15 @@
+:root {
+    --background-color: #121212;
+    --text-color: #f5dee8;
+    --input-color: #1F1B24;
+    --navigation-color: #d099af;
+    --link-color: #234272;
+}
+  
+
+[data-theme="light"] {
+    --background-color: #F1F0E8;
+    --text-color: #121212;
+    --input-color: #E5E1DA;
+    --navigation-color: #89A8B2;
+}
