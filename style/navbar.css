@@ -78,6 +78,7 @@
         .homepage:hover {
             background-color:var(--navigation-color);
             color:var(--background-color);
+            font-size: 1.2rem;
         }
     }
 

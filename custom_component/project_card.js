@@ -43,7 +43,9 @@ class ProjectCard extends HTMLElement {
         hgroup.style.height = this.getAttribute('height');
         if (this.hasAttribute("text")) {
             hgroup.style.display = "flex";
-            image.style.display = "none";       
+            image.style.display = "none";  
+            hgroup.style.backgroundImage = `url(${this.getAttribute('picture-src')})`;
+            hgroup.style.backgroundColor = "rgba(18, 18, 18, 0.95)";
         } else {
             hgroup.style.display = "none";
             image.style.display = "block";
@@ -52,7 +54,7 @@ class ProjectCard extends HTMLElement {
         this.shadowRoot.getElementById("projectcard").addEventListener("click", () => {
             hgroup.style.display = hgroup.style.display === "none" ? "flex" : "none";
             image.style.display = image.style.display === "block" ? "none" : "block";
-            hgroup.style.backgroundImage = `url(${this.getAttribute('picture-src')})`;
+            hgroup.style.backgroundImage = hgroup.style.display === "none" ? "" : `url(${this.getAttribute('picture-src')})`;
             hgroup.style.backgroundColor = hgroup.style.display === "none" ? "" : "rgba(18, 18, 18, 0.95)";
         });
     }

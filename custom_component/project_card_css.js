@@ -1,10 +1,5 @@
 export function getProjectCardCSS() {
     return `
-        @font-face {
-            font-family: "morgan chalk";
-            src: url(../font/MorganChalk-L3aJy.ttf);
-        }
-
         * {
             margin: 0;
             border: 0;
