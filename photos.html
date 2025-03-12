@@ -17,6 +17,8 @@
         <header>
             <div id="background">
                 <h1>Photo Gallery</h1>
+                <button id="load-remote">Load Remote</button>
+                <button id="load-local">Load Local</button>
             </div>
             <nav id="main-navigation">
                 <ul id="main-navigation-ul">
@@ -31,119 +33,115 @@
 
         <main>
             <script type="module" src="./custom_component/project_card.js"></script>
-            <div id="photo-container">
-                <div id="horizontal-row1-1"> 
-                    <project-card
-                        width="35vw"
-                        height="30vh"
-                        h2="Saqsaywaman, Peru"
-                        picture-src="image/peru/IMG_4224.jpg" 
-                        picture-alt="Photo taken in Saqsaywaman, Peru"
-                        description="description"
-                        date="June 25, 2023"
-                        href="https://en.wikipedia.org/wiki/Sacsayhuam%C3%A1n">
-                    </project-card>
-                </div>
-                <div id="horizontal-row1-2">
-                    <project-card
-                        width="45vw"
-                        height="30vh"
-                        h2="Death Valley"
-                        picture-src="image/death_valley/IMG_8849.jpg" 
-                        picture-alt="Photo taken at Death Valley"
-                        description="description"
-                        date="March 8, 2024"
-                        href="https://www.nps.gov/deva/index.htm">
-                    </project-card>
-                </div>
-                <div id="horizontal-row2-1"> 
-                    <project-card
-                        width="45vw"
-                        height="30vh"
-                        h2="Saqsaywaman, Peru"
-                        picture-src="image/peru/IMG_4232.jpg" 
-                        picture-alt="Photo taken in Saqsaywaman, Peru"
-                        description="description"
-                        date="June 25, 2023"
-                        href="https://en.wikipedia.org/wiki/Sacsayhuam%C3%A1n"
-                        text>
-                    </project-card>
-                </div>
-                <div id="horizontal-row2-2">
-                    <project-card
-                        width="35vw"
-                        height="30vh"
-                        h2="Death Valley"
-                        picture-src="image/death_valley/IMG_8763.jpg" 
-                        picture-alt="Photo taken at Death Valley"
-                        description="description"
-                        date="March 8, 2024"
-                        href="https://www.nps.gov/deva/index.htm">
-                    </project-card>
-                </div>
-                <div id="horizontal-row3"> 
-                    <project-card
-                        width="62vw"
-                        height="30vh"
-                        h2="Hong Kong"
-                        picture-src="image/hong_kong/IMG_0775.jpg" 
-                        picture-alt="Photo taken in Hong Kong"
-                        description="description"
-                        date="March 8, 2024"
-                        href="https://en.wikipedia.org/wiki/Port_of_Hong_Kong">
-                    </project-card>
-                </div>
-                <div id="horizontal-row4-1"> 
-                    <project-card
-                        width="32vw"
-                        height="30vh"
-                        h2="Saqsaywaman, Peru"
-                        picture-src="image/peru/IMG_4225.jpg" 
-                        picture-alt="Photo taken in Saqsaywaman, Peru"
-                        description="description"
-                        date="June 25, 2023"
-                        href="https://en.wikipedia.org/wiki/Sacsayhuam%C3%A1n"
-                        text>
-                    </project-card>
-                </div>
-                <div id="horizontal-row4-2">
-                    <project-card
-                        width="50vw"
-                        height="30vh"
-                        h2="Hong Kong"
-                        picture-src="image/hong_kong/IMG_0788.jpg" 
-                        picture-alt="Photo taken in Hong Kong"
-                        description="description"
-                        date="March 8, 2024"
-                        href="https://en.wikipedia.org/wiki/Port_of_Hong_Kong">
-                    </project-card>
-                </div>
-                <div id="vertical-row123"> 
-                    <project-card
-                        width="20vw"
-                        height="90vh"
-                        h2="Shibuya, Japan"
-                        picture-src="image/japan/_DSC4760.jpg" 
-                        picture-alt="Photo taken at Shibuya Sky, Japan"
-                        description="description"
-                        date="March 8, 2024"
-                        href="https://www.nps.gov/deva/index.htm"
-                        text>
-                    </project-card>
-                </div>
-                <div id="vertical-row34"> 
-                    <project-card
-                        width="18vw"
-                        height="60vh"
-                        h2="Cusco, Peru"
-                        picture-src="image/peru/IMG_4201.jpg" 
-                        picture-alt="Photo taken in Saqsaywaman, Peru"
-                        description="description"
-                        date="June 25, 2023"
-                        href="https://en.wikipedia.org/wiki/Sacsayhuam%C3%A1n">
-                    </project-card>
-                </div>
-            </div>
+            <div id="photo-container"></div>
+
+            <script>
+                const populated = false
+                document.getElementById("load-remote").addEventListener("click", async () => {
+                    const url="https://api.jsonbin.io/v3/b/67cfdc7f8561e97a50e9c9c8";
+
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) {
+                            throw new Error(`Response status: ${response.status}`);
+                        }
+
+                        const jsonData = await response.json();
+
+                        const photoContainer = document.getElementById("photo-container");
+                        photoContainer.innerHTML = `
+                            <div id="IMG_4224" class="horizontal-row1-1"> 
+                            </div>
+                            <div id="IMG_8849" class="horizontal-row1-2">
+                            </div>
+                            <div id="IMG_4232" class="horizontal-row2-1"> 
+                            </div>
+                            <div id="IMG_8763" class="horizontal-row2-2">
+                            </div>
+                            <div id="IMG_0775" class="horizontal-row3">
+                            </div>
+                            <div id="IMG_4225" class="horizontal-row4-1"> 
+                            </div>
+                            <div id="IMG_0788" class="horizontal-row4-2">
+                            </div>
+                            <div id="_DSC4760" class="vertical-row123"> 
+                            </div>
+                            <div id="IMG_4201" class="vertical-row34">
+                            </div>
+                            `
+
+                        jsonData.record.projects.forEach(photo => {
+                            const galleryPhoto = document.createElement("project-card");
+                            galleryPhoto.setAttribute("width", `${photo.width}`);
+                            galleryPhoto.setAttribute("height", `${photo.height}`);
+                            galleryPhoto.setAttribute("h2", `${photo.h2}`);
+                            galleryPhoto.setAttribute("picture-src", `${photo.picture_src}`);
+                            galleryPhoto.setAttribute("picture-alt", `${photo.picture_alt}`);
+                            galleryPhoto.setAttribute("description", `${photo.description}`);
+                            galleryPhoto.setAttribute("date", `${photo.date}`);
+                            galleryPhoto.setAttribute("href", `${photo.href}`);
+                            if (photo.text === "true") {
+                                galleryPhoto.setAttribute("text", "");
+                            }
+                            document.getElementById(`${photo.photoid}`).appendChild(galleryPhoto);
+
+                        localStorage.setItem("PhotoGalleryProject", JSON.stringify(jsonData))
+                        })
+                    } catch (error) {
+                        console.error(error.message);
+                    }
+                });
+
+                document.getElementById("load-local").addEventListener("click", () => {
+
+                    const photoGalleryProjectData = localStorage.getItem("PhotoGalleryProject");
+
+                    if (photoGalleryProjectData) {
+                        const localJsonData = JSON.parse(photoGalleryProjectData);
+
+                        const photoContainer = document.getElementById("photo-container");
+                        photoContainer.innerHTML = `
+                            <div id="IMG_4224" class="horizontal-row1-1"> 
+                            </div>
+                            <div id="IMG_8849" class="horizontal-row1-2">
+                            </div>
+                            <div id="IMG_4232" class="horizontal-row2-1"> 
+                            </div>
+                            <div id="IMG_8763" class="horizontal-row2-2">
+                            </div>
+                            <div id="IMG_0775" class="horizontal-row3">
+                            </div>
+                            <div id="IMG_4225" class="horizontal-row4-1"> 
+                            </div>
+                            <div id="IMG_0788" class="horizontal-row4-2">
+                            </div>
+                            <div id="_DSC4760" class="vertical-row123"> 
+                            </div>
+                            <div id="IMG_4201" class="vertical-row34">
+                            </div>
+                            `
+                        console.log(localJsonData)
+
+                        localJsonData.record.projects.forEach(photo => {
+                            const galleryPhoto = document.createElement("project-card");
+                            galleryPhoto.setAttribute("width", `${photo.width}`);
+                            galleryPhoto.setAttribute("height", `${photo.height}`);
+                            galleryPhoto.setAttribute("h2", `${photo.h2}`);
+                            galleryPhoto.setAttribute("picture-src", `${photo.picture_src}`);
+                            galleryPhoto.setAttribute("picture-alt", `${photo.picture_alt}`);
+                            galleryPhoto.setAttribute("description", `${photo.description}`);
+                            galleryPhoto.setAttribute("date", `${photo.date}`);
+                            galleryPhoto.setAttribute("href", `${photo.href}`);
+                            if (photo.text === "true") {
+                                galleryPhoto.setAttribute("text", "");
+                            }
+                            document.getElementById(`${photo.photoid}`).appendChild(galleryPhoto);
+                        });
+                    } else {
+                        console.error("No localstorage data found!");
+                    }
+                });
+            </script>
         </main>
 
         <footer>

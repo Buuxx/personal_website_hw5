@@ -27,6 +27,7 @@ export function getProjectCardCSS() {
             #background-description {
                 margin: auto;
                 font-weight: 200;
+                padding: 0 3.5rem;
             }
             
             aside {
