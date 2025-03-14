@@ -1,3 +1,5 @@
+@import url(variable.css);
+
 @font-face {
     font-family: "morgan chalk";
     src: url(../font/MorganChalk-L3aJy.ttf)
@@ -49,7 +51,7 @@
     }
 
     #main-content{
-        padding: 3rem 28rem;
+        padding: 3rem 30dvw;
     }
 
     .main-h2 {
@@ -63,7 +65,7 @@
         font-family: "IBM Plex Sans", serif, monospace;;
         font-size: 0.7rem;
         text-transform: uppercase;
-        padding: 1rem 0rem 2rem 0rem;
+        margin: 1rem 0rem 2rem 0rem;
         letter-spacing: 0.15rem;
         font-weight: 100;
     }
@@ -71,7 +73,7 @@
     aside{
         font-style: italic;
         font-weight: 100;
-        padding: 0rem 3rem 0rem 2rem;
+        margin: 0rem 3rem 0rem 2rem;
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.15rem;
@@ -79,40 +81,45 @@
     }
 
     #h2-photo-gallery{
-        padding: 0rem 28rem;
+        padding: 0rem 30dvw;
     }
 
     #img1 {
         width: 40dvw;
+        height: 25dvh;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     image-navigation{
         display:flex;
         justify-content: center;
         flex-direction: row;
-        padding: 2rem 0rem 10rem 0rem;
+        padding: 2rem 0rem 7rem 0rem;
     }
 
     #photo-gallery-to-the-left {
+        display: inline;
         border: none;
         background-color: transparent;
-        color:#e8c6d4;
-        padding: 0rem 2rem 0rem 0rem;
-    }
-
-    #photo-gallery-to-the-left:hover {
-        transform: scale(1.2);
+        color: var(--heading-color);
+        margin: 0rem 2rem 0rem 0rem;
     }
 
     #photo-gallery-to-the-right {
         border: none;
         background-color: transparent;
-        color: #e8c6d4;
-        padding: 0rem 0rem 0rem 2rem;
+        color: var(--heading-color);
+        margin: 0rem 0rem 0rem 2rem;
     }
 
-    #photo-gallery-to-the-right:hover {
+    #right-toggle:hover, #left-toggle:hover {
         transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    #right-toggle:active, #left-toggle:active {
+        color: var(--background-color);
     }
 }
 
@@ -158,7 +165,7 @@
     }
 
     #main-content{
-        padding: 3rem 12rem;
+        padding: 3rem 18dvw;
     }
 
     .main-h2 {
@@ -188,40 +195,45 @@
     }
 
     #h2-photo-gallery{
-        padding: 0rem 12rem;
+        padding: 0rem 18dvw;
     }
 
     #img1 {
         width: 55dvw;
+        height: 32dvh;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     image-navigation{
         display:flex;
         justify-content: center;
         flex-direction: row;
-        padding: 2rem 0rem 10rem 0rem;
+        padding: 2rem 0rem 7rem 0rem;
     }
 
     #photo-gallery-to-the-left {
+        display: inline;
         border: none;
         background-color: transparent;
-        color:#e8c6d4;
-        padding: 0rem 2rem 0rem 0rem;
-    }
-
-    #photo-gallery-to-the-left:hover {
-        transform: scale(1.2);
+        color: var(--heading-color);
+        margin: 0rem 2rem 0rem 0rem;
     }
 
     #photo-gallery-to-the-right {
         border: none;
         background-color: transparent;
-        color: #e8c6d4;
-        padding: 0rem 0rem 0rem 2rem;
+        color: var(--heading-color);
+        margin: 0rem 0rem 0rem 2rem;
     }
 
-    #photo-gallery-to-the-right:hover {
+    #right-toggle:hover, #left-toggle:hover {
         transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    #right-toggle:active, #left-toggle:active {
+        color: var(--background-color);
     }
 }
 
@@ -302,12 +314,30 @@
 
     #img1 {
         width: 80dvw;
+        height: 20dvh;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     image-navigation{
         display:flex;
         justify-content: center;
         flex-direction: row;
-        padding: 2rem 0rem 10rem 0rem;
+        padding: 2rem 0rem 7rem 0rem;
+    }
+
+    #photo-gallery-to-the-left {
+        display: inline;
+        border: none;
+        background-color: transparent;
+        color: var(--heading-color);
+        margin: 0rem 0.5rem 0rem 0rem;
+    }
+
+    #photo-gallery-to-the-right {
+        border: none;
+        background-color: transparent;
+        color: var(--heading-color);
+        margin: 0rem 0rem 0rem 0.5rem;
     }
 }

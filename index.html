@@ -84,20 +84,60 @@
                 <h2 id="h2-photo-gallery" class="main-h2">Photo Gallery</h2>
                 <image-navigation>
                     <button id="photo-gallery-to-the-left">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-chevron-left">
+                        <svg id="left-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"/>
                             <path d="m14 16-4-4 4-4"/>
                         </svg>
                     </button>
-                    <img id="img1" src="./image/hong_kong/IMG_0788-large.JPG" alt="Port in Hong Kong 1">
+                    <section id="gallery-image">
+                        <a href="photos.html"><img id="img1" src="https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_0788.JPG" alt="Port in Hong Kong 1"></a>
+                    </section>
                     <button id="photo-gallery-to-the-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-chevron-right">
+                        <svg id="right-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"/>
                             <path d="m10 8 4 4-4 4"/>
                         </svg>
                     </button>
                 </image-navigation>
             </section>
+            <script>
+                let n = 0
+                const gallerySrcList = 
+                    ["https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_0788.JPG", 
+                    "https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_4232.JPG",
+                    "https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_0775.jpg",
+                     "https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_8849.JPG",
+                     "https://pub-6a0b057cfe714a5fb807bfa773519d51.r2.dev/IMG_4224.JPG",];
+                const galleryAltList = 
+                    ["Port in Hong Kong 1", 
+                    "Photo taken in Saqsaywaman, Peru",
+                    "Port in Hong Kong 2", 
+                    "Photo taken at the Zaberiske point in Death Valley",
+                    "Photo taken in Saqsaywaman, Peru"];
+                document.getElementById("photo-gallery-to-the-right").addEventListener("click", () => {
+                    if (n < gallerySrcList.length - 1) {
+                        n = n + 1;
+                    } else {
+                        n = 0;
+                    }
+                    console.log(n);
+                    const imageSection = document.getElementById("gallery-image");
+                    imageSection.innerHTML = `
+                        <a href="photos.html"><img id="img1" src=${gallerySrcList[n]} alt=${galleryAltList[n]}></a>`;
+                });
+
+                document.getElementById("photo-gallery-to-the-left").addEventListener("click", () => {
+                    if (n > 0) {
+                        n = n - 1;
+                    } else {
+                        n = gallerySrcList.length - 1;
+                    }
+                    console.log(n);
+                    const imageSection = document.getElementById("gallery-image");
+                    imageSection.innerHTML = `
+                        <a href="photos.html"><img id="img1" src=${gallerySrcList[n]} alt=${galleryAltList[n]}></a>`;
+                });
+            </script>
         </main>
 
         <footer>

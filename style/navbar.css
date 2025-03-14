@@ -326,16 +326,10 @@
             margin: 0 auto;
             font-size: 0.6rem;
             font-family: "IBM Plex Sans", monospace, serif;
-            font-weight: 200;
+            font-weight: 400;
             color:var(--background-color);
             text-decoration: none;
             transition:all 1s 50ms;
-        }
-
-        .subpage:hover {
-            background-color:var(--background-color);
-            color:var(--navigation-color);
-            font-weight: 400;
         }
 
         .homepage {
@@ -347,16 +341,10 @@
             background-color: var(--background-color);
             color: var(--navigation-color);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 1.1rem;
             font-weight: 800;
             font-family: "morgan chalk", serif;
             transition:all 1s;
-        }
-
-        .homepage:hover {
-            background-color:var(--navigation-color);
-            color:var(--background-color);
-            font-size: 1.2rem;
         }
     }
 
