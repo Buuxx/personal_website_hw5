@@ -37,7 +37,9 @@
 
             <script>
                 const populated = false
+                const clickSound = new Audio("./audio/mixkit-hard-typewriter-click-1119.wav");
                 document.getElementById("load-remote").addEventListener("click", async () => {
+                    clickSound.play();
                     const url="https://api.jsonbin.io/v3/b/67cfdc7f8561e97a50e9c9c8";
 
                     try {
@@ -93,6 +95,7 @@
                 });
 
                 document.getElementById("load-local").addEventListener("click", () => {
+                    clickSound.play();
 
                     const photoGalleryProjectData = localStorage.getItem("PhotoGalleryProject");
 

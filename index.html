@@ -114,7 +114,9 @@
                     "Port in Hong Kong 2", 
                     "Photo taken at the Zaberiske point in Death Valley",
                     "Photo taken in Saqsaywaman, Peru"];
+                const clickSound = new Audio("./audio/mixkit-hard-typewriter-click-1119.wav");
                 document.getElementById("photo-gallery-to-the-right").addEventListener("click", () => {
+                    clickSound.play();
                     if (n < gallerySrcList.length - 1) {
                         n = n + 1;
                     } else {
@@ -127,6 +129,7 @@
                 });
 
                 document.getElementById("photo-gallery-to-the-left").addEventListener("click", () => {
+                    clickSound.play();
                     if (n > 0) {
                         n = n - 1;
                     } else {
