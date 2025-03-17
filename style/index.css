@@ -15,7 +15,7 @@
         display: flex;
         align-items: flex-end;
         background-image: url(../image/glass2.jpg);
-        background-color: #121212;
+        background-color: var(--background-color);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
@@ -25,7 +25,7 @@
     }
 
     #header-h-group{
-        color:#e8c6d4;
+        color:var(--heading-color);
         padding: 0 20rem 3rem 20rem;
     }
 
@@ -40,8 +40,8 @@
     }
 
     main {
-        background-color: #121212;
-        color:#f5dee8;
+        background-color: var(--background-color);
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;
@@ -132,14 +132,14 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
-        background-color: #121212;
+        background-color: var(--background-color);
         height: 94dvh;
         background-size: auto 94dvh;
         z-index: -1;
     }
 
     #header-h-group{
-        color:#e8c6d4;
+        color:var(--heading-color);
         padding: 0 5rem 2rem 5rem;
     }
 
@@ -154,8 +154,8 @@
     }
 
     main {
-        background-color: #121212;
-        color:#f5dee8;
+        background-color: var(--background-color);
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;
@@ -253,7 +253,7 @@
     }
 
     #header-h-group{
-        color:#e8c6d4;
+        color:var(--heading-color);
         padding: 0 5rem 2rem 2rem;
     }
 
@@ -269,8 +269,8 @@
     }
 
     main {
-        background-color: #121212;
-        color:#f5dee8;
+        background-color: var(--background-color);
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;

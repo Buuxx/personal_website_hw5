@@ -1,8 +1,4 @@
-Part 3. Website Enhancement
-1. [DONE] center the navigation bar (it was a little off before with the flexbox display)
-2. [WIP] improve the structure and readability of the files. Seperate css and js docs that were used in more than one file
-2. [TODO] improved the design of footer: condensed in one line, and added text decorations
-3. [TODO] designe a new favicon and apply in all pages
-4. [TODO] apply the light and dark mode in all pages
-5. [TODO] ensure performance for all screen sizes in all pages
-6. [TODO] add the photo gallery feature in the homepage
+# Part 3. Website Enhancement
+
+For Part3, the website enhancement, I made the following several changes to improve my websitel. First, I added sound to the buttons when clicking. This helps to improve user experience when they interact with the site. Besides that, instead of using httpbins as the form action, I used https://formspree.io/ to help me with handling the form data. By linking my formspree account to my email, I am now able to receive an email for every form submissions. This allows me to view and response to the contact messages on a daily basis. Aside from these improvments in functionality, I also improved the sturcture of the sites - I combined the shared CSS and JS contents into a seperate file, and added a variable css file to record all the used colors. This improved readability of my code and will fasten the process when adding new features in the future.
+

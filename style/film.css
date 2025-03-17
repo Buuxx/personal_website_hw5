@@ -3,6 +3,8 @@
     src: url(../font/MorganChalk-L3aJy.ttf)
 }
 
+@import url(variable.css);
+
 @media (min-width: 1370px){
 
     h1 {
@@ -26,7 +28,7 @@
 
     main {
         background-color: #121212;
-        color:#f5dee8;
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;
@@ -68,7 +70,7 @@
         display: flex;
         align-items: flex-end;
         background-image: url(../image/haroldandmaude4.jpg);
-        background-color: #121212;
+        background-color: var(--background-color);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
@@ -84,8 +86,8 @@
     }
 
     main {
-        background-color: #121212;
-        color:#f5dee8;
+        background-color: var(--background-color);
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;
@@ -127,7 +129,7 @@
         display: flex;
         align-items: flex-end;
         background-image: url(../image/haroldandmaude4.jpg);
-        background-color: #121212;
+        background-color: var(--background-color);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
@@ -143,8 +145,8 @@
     }
 
     main {
-        background-color: #121212;
-        color:#f5dee8;
+        background-color: var(--background-color);
+        color:var(--text-color);
         font-family: "IBM Plex Sans", serif, monospace;
         font-display: swap;
         font-weight: 250;
