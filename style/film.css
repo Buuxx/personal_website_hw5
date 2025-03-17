@@ -1,11 +1,6 @@
 @font-face {
     font-family: "morgan chalk";
-    src: url(font/MorganChalk-L3aJy.ttf)
-}
-
-@keyframes background-animation {
-    0%  {background-image: url(../image/haroldandmaude4.jpg);}
-    50% {background-image: url(../image/haroldandmaude3.jpg);}
+    src: url(../font/MorganChalk-L3aJy.ttf)
 }
 
 @media (min-width: 1370px){
@@ -40,6 +35,10 @@
         letter-spacing: 0.02rem;
         padding: 3rem 20rem;
 
+        h2 {
+            font-family: "ivymode-1", serif;;
+        }
+
         #film-me{
             display:flex;
             justify-content: space-between;
@@ -50,6 +49,10 @@
             display:flex;
             justify-content: space-between;
             padding: 4rem 0rem;
+
+            p {
+                margin: 0 6rem 0 0;
+            }
         }
 
         iframe {

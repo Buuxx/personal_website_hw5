@@ -247,8 +247,8 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
-        height: 95dvh;
-        background-size: auto 95dvh;
+        height: 94dvh;
+        background-size: auto 94dvh;
         z-index: -1;
     }
 
